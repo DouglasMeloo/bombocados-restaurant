@@ -10,11 +10,9 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 
-# Splitting the environment setting across multiple lines
 os.environ.setdefault(
     'DJANGO_SETTINGS_MODULE',
     'bombocados_restaurant.settings'
 )
 
 application = get_wsgi_application()
-

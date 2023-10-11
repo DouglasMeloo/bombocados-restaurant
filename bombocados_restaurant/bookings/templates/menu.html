@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Menu</h2>
+  <ul>
+    {% for item in menu_items %}
+      <li>{{ item.name }} - ${{ item.price }} - 
+          {% if item.is_vegan %}Vegan{% elif item.is_vegetarian %}Vegetarian{% else %}Non-Vegetarian{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

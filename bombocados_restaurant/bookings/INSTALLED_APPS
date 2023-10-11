@@ -1,0 +1,6 @@
+INSTALLED_APPS = [
+    # ...
+    'bookings',
+    'user_section',
+    # ...
+]

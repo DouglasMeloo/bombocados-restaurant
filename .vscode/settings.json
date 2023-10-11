@@ -28,6 +28,7 @@
       "ASGI",
       "bombocados",
       "gunicorn",
+      "whitenoise",
       "wsgi"
    ],
    "[python]": {

@@ -3,7 +3,7 @@ from .models import Reservation, Table, MenuItem
 
 
 class BookingTestCase(TestCase):
-    
+
     def setUp(self):
         self.table = Table.objects.create(number=1, size=4)
         self.menu_item = MenuItem.objects.create(name="Pasta", price=12.99)

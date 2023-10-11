@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Reservation, Table, MenuItem
 
+
 class BookingTestCase(TestCase):
     
     def setUp(self):

@@ -25,7 +25,9 @@
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.words": [
-      "bombocados"
+      "bombocados",
+      "gunicorn",
+      "wsgi"
    ],
    "[python]": {
       "editor.defaultFormatter": "ms-python.autopep8"

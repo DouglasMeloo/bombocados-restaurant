@@ -1,0 +1,8 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Welcome to Bombocados Restaurant!</h1>
+  <p>Experience the best dining with us.</p>
+  <a href="{% url 'reserve' %}">Reserve a Table</a> |
+  <a href="{% url 'menu' %}">View Menu</a>
+{% endblock %}

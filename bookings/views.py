@@ -4,6 +4,7 @@ from .forms import ReservationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+
 @login_required
 def reserve_table(request):
     if request.method == 'POST':
@@ -16,9 +17,11 @@ def reserve_table(request):
             return redirect('home')
     else:
         form = ReservationForm()
-    return render(request, 'bookings/reserve.html', {'form': form})
+    print("here")
+    return render(request, 'reserve.html')
 
 
 def menu_view(request):
     menu_items = MenuItem.objects.all()
-    return render(request, 'bookings/menu.html', {'menu_items': menu_items})
+    all()  # BO de SQL
+    return render(request, 'menu.html')

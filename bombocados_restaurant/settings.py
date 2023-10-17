@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',  # <-- Added 'homepage' to the list
+    'bookings',
+    'user_section'
+    
 ]
 
 MIDDLEWARE = [
@@ -49,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bombocados_restaurant.urls'
 
+TEMPLATE_DIR = Path(BASE_DIR, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

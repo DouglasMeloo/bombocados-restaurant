@@ -5,5 +5,4 @@ from django.shortcuts import render
 
 
 def home(request):
-    print(BASE_DIR)
     return render(request, 'home.html')

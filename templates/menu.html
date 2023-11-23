@@ -1,4 +1,6 @@
-{% extends "base_generic.html" %} {% block content %}
+{% extends "base_generic.html" %}
+
+{% block content %}
 <div class="container mt-4">
   <h2 class="text-center">Our Menu</h2>
 
@@ -6,13 +8,14 @@
   <section id="vegetarian">
     <h3 class="menu-section-title">Vegetarian Delights</h3>
     <div class="row">
-      {% for item in menu_items %} {% if item.is_vegetarian and not
-      item.is_vegan %}
-      <div class="col-md-4 menu-item-card">
-        <h4>{{ item.name }}</h4>
-        <p>${{ item.price }}</p>
-      </div>
-      {% endif %} {% endfor %}
+      {% for item in menu_items %}
+        {% if item.is_vegetarian and not item.is_vegan %}
+          <div class="col-md-4 menu-item-card">
+            <h4>{{ item.name }}</h4>
+            <p>${{ item.price }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </section>
 
@@ -20,12 +23,14 @@
   <section id="vegan">
     <h3 class="menu-section-title">Vegan Specials</h3>
     <div class="row">
-      {% for item in menu_items %} {% if item.is_vegan %}
-      <div class="col-md-4 menu-item-card">
-        <h4>{{ item.name }}</h4>
-        <p>${{ item.price }}</p>
-      </div>
-      {% endif %} {% endfor %}
+      {% for item in menu_items %}
+        {% if item.is_vegan %}
+          <div class="col-md-4 menu-item-card">
+            <h4>{{ item.name }}</h4>
+            <p>${{ item.price }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </section>
 
@@ -33,17 +38,14 @@
   <section id="pasta">
     <h3 class="menu-section-title">Pasta Favorites</h3>
     <div class="row">
-      {% for item in menu_items %} {% if item.category == 'Pasta' %}
-      <div class="col-md-4 menu-item-card">
-        <img
-          src="{% static 'path/to/pasta/image.jpg' %}"
-          alt="{{ item.name }}"
-          class="menu-item-image"
-        />
-        <h4>{{ item.name }}</h4>
-        <p>${{ item.price }}</p>
-      </div>
-      {% endif %} {% endfor %}
+      {% for item in menu_items %}
+        {% if item.category == 'Pasta' %}
+          <div class="col-md-4 menu-item-card">
+            <h4>{{ item.name }}</h4>
+            <p>${{ item.price }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </section>
 
@@ -51,17 +53,29 @@
   <section id="drinks">
     <h3 class="menu-section-title">Refreshing Drinks</h3>
     <div class="row">
-      {% for item in menu_items %} {% if item.category == 'Drinks' %}
-      <div class="col-md-4 menu-item-card">
-        <img
-          src="{% static 'path/to/drinks/image.jpg' %}"
-          alt="{{ item.name }}"
-          class="menu-item-image"
-        />
-        <h4>{{ item.name }}</h4>
-        <p>${{ item.price }}</p>
-      </div>
-      {% endif %} {% endfor %}
+      {% for item in menu_items %}
+        {% if item.category == 'Drinks' %}
+          <div class="col-md-4 menu-item-card">
+            <h4>{{ item.name }}</h4>
+            <p>${{ item.price }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Desserts Section -->
+  <section id="desserts">
+    <h3 class="menu-section-title">Delicious Desserts</h3>
+    <div class="row">
+      {% for item in menu_items %}
+        {% if item.category == 'Desserts' %}
+          <div class="col-md-4 menu-item-card">
+            <h4>{{ item.name }}</h4>
+            <p>${{ item.price }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
   </section>
 </div>

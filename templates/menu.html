@@ -1,12 +1,21 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h2>Menu</h2>
-  <ul>
-    {% for item in menu_items %}
-      <li>{{ item.name }} - ${{ item.price }} - 
-          {% if item.is_vegan %}Vegan{% elif item.is_vegetarian %}Vegetarian{% else %}Non-Vegetarian{% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-{% endblock %}
+  <div class="container mt-4">
+    <h2 class="text-center">Our Menu</h2>
+    
+    <!-- Vegetarian Section -->
+    <section id="vegetarian">
+      <h3 class="menu-section-title">Vegetarian Delights</h3>
+      <div class="row">
+        {% for item in menu_items %}
+          {% if item.is_vegetarian and not item.is_vegan %}
+            <div class="col-md-4 menu-item-card">
+              <img src="{% static 'path/to/vegetarian/image.jpg' %}" alt="{{ item.name }}" class="menu-item-image">
+              <h4>{{ item.name }}</h4>
+              <p>${{ item.price }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>

@@ -1,0 +1,13 @@
+/* style.css */
+.hero-section {
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 50px 0;
+}
+
+.menu-items, .testimonials {
+  display: flex;
+  justify-content: space-around;
+  /* Add more styling as needed */
+}

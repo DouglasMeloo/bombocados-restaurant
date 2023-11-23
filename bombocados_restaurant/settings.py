@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,8 +27,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,10 +34,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'widget_tweaks',  
-    'homepage',  # <-- Added 'homepage' to the list     
-    'bookings',       
-    'user_section',   
+    'widget_tweaks',
+    'homepage',  # <-- Added 'homepage' to the list
+    'bookings',
+    'user_section'
+    
 ]
 
 MIDDLEWARE = [
@@ -60,7 +58,7 @@ TEMPLATE_DIR = Path(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

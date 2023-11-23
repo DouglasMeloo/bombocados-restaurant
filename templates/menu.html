@@ -35,3 +35,22 @@
         {% endfor %}
       </div>
     </section>
+
+    <!-- Pasta Section -->
+    <section id="pasta">
+      <h3 class="menu-section-title">Pasta Favorites</h3>
+      <div class="row">
+        {% for item in menu_items %}
+          {% if item.category == 'Pasta' %}
+            <div class="col-md-4 menu-item-card">
+              <img src="{% static 'path/to/pasta/image.jpg' %}" alt="{{ item.name }}" class="menu-item-image">
+              <h4>{{ item.name }}</h4>
+              <p>${{ item.price }}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+
+  </div>
+{% endblock %}

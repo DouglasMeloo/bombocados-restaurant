@@ -1,3 +1,11 @@
+body {
+  background-image: url(../css/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+
+}
 #page-container {
   position: relative;
   min-height: 100vh;

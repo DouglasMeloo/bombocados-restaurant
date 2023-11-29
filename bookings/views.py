@@ -9,16 +9,18 @@ from django.contrib.auth.decorators import login_required
 def reserve_table(request):
     if request.method == 'POST':
         form = ReservationForm(request.POST)
-        if form.is_valid():
-            reservation = form.save(commit=False)
-            reservation.user = request.user
-            reservation.save()
-            messages.success(request, 'Table reserved successfully!')
-            return redirect('home')
+        # print(form)
+        # if form.is_valid():
+        #     reservation = form.save(commit=False)
+        #     reservation.user = request.user
+        #     reservation.save()
+        #     messages.success(request, 'Table reserved successfully!')
+        #     return redirect('home')
         return render(request, 'reserve.html')
 
+    form = ReservationForm()
     print("here")
-    return render(request, 'reserve.html')
+    return render(request, 'reserve.html', { 'form': form })
 
 
 def menu_view(request):

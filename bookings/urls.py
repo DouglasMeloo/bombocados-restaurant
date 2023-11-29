@@ -7,3 +7,11 @@ urlpatterns = [
     path('register/', register_view, name='register')
     # add more paths as needed
 ]
+
+
+# Django MVC
+# Django Forms
+# Django database (ORM) - camada que interage com db sem vc precisar escrever SQL na mao..
+# Django unit test
+
+# CRUD - Create, read update delete
